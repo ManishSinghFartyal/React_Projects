@@ -1,0 +1,19 @@
+.header{
+	background-color:#b2daff;
+	font-weight: bolder;
+	font-size: 28px;
+	color:white;
+	border-radius: 10px;	
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	padding: 10px 10px 10px 10px;
+}
+
+span{
+	text-align: center;	
+}
+
+.panel{
+	position: relative;
+	text-align: center;
+	width: 100%;
+}

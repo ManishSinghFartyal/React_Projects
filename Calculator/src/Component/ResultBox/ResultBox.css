@@ -1,0 +1,31 @@
+.header{
+	background-color:#b2daff;
+	font-weight: bolder;
+	font-size: 28px;
+	color:white;
+	border-radius: 10px;	
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	padding: 10px 10px 10px 10px;
+}
+
+span{
+	text-align: center;	
+}
+
+.panel{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+}
+
+.inputText{
+	border: 2px solid;
+	border-radius: 10px;
+	height: 60px;
+	width:600px;
+	background: #fff5;
+	font-size: 26px;
+	font-family:serif;
+	padding-left: 10px; 
+}
