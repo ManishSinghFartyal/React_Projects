@@ -16,17 +16,13 @@ span{
 	position: relative;
 	text-align: center;
 	width: 100%;
-	padding: 10px 10px 10px 10px;
 }
 
-.inputText{
-	border: 1px solid;
-	border-bottom-width: 10px;
-	border-radius: 1px;
-	height: 60px;
-	width:600px;
+.progressText{
+	border-radius: 3px;
+	height: 30px;
+	width:300px;
 	background: #fff;
-	font-size: 26px;
-	font-family:serif;
+	font-size: 10px;
 	padding-left: 10px; 
 }
