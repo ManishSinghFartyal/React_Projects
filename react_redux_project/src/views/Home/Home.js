@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchNewTime, fetchName } from '../../redux/actionCreators';
+import './Home.css';
+import Timezone from '../Timezone/Timezone.js'
 
 
 class Home extends React.Component{
@@ -21,14 +23,14 @@ class Home extends React.Component{
     this.setState({
       name:this.name1
     })
-    this.props.updateTime(this.name1);
+    this.props.updateName(this.name1);
   }
 
   render(){
       return (
         <div className="home">
           
-          
+          <Timezone currentTime={this.props.currentTime} updateTime={this.props.updateTime}/>
           <h1> Enter name </h1>
           <p>Name (from local states bindning ): {this.state.name}</p>
           <p>Name (from redux store ): {this.props.currentName.map((value,index)=>{
@@ -51,7 +53,8 @@ class Home extends React.Component{
   }
 
   const mapDispatchToProps ={
-    updateTime :(x) => fetchName(x)
+    updateName :(x) => fetchName(x),
+    updateTime :(x) => fetchNewTime(x)
   }
 
 

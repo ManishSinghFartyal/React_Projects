@@ -14,7 +14,6 @@ export const rootReducer = (state = initialState, action) => {
             return{...state,currentTime:action.payload}
         case types.FETCH_NAME:
             const names = state.currentName.concat(action.payload)
-            console.log(names)            
             return{...state,currentName:names}
         default:
             return state;
