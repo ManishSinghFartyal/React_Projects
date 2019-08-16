@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { fetchNewTime, fetchName } from '../../redux/actionCreators';
 import './Home.css';
 import Timezone from '../Timezone/Timezone.js'
-
+import NameList from '../NameList/NameList.js'
+import Header from '../Header/Header.js'
 
 class Home extends React.Component{
  
@@ -29,18 +30,24 @@ class Home extends React.Component{
   render(){
       return (
         <div className="home">
-          
+          <Header/>
           <Timezone currentTime={this.props.currentTime} updateTime={this.props.updateTime}/>
-          <h1> Enter name </h1>
-          <p>Name (from local states bindning ): {this.state.name}</p>
-          <p>Name (from redux store ): {this.props.currentName.map((value,index)=>{
-            return <li key={index}>{value}</li>
-          })}</p>
-            <input type="text" className="name1" onChange={this.updateNameHandle.bind(this)}/>
-          <button onClick={this.setNameHandle.bind(this)}>
-            Add
-          </button>
-        </div>
+          <hr/>
+          <div>
+          <table className="table">
+            <tr>
+              <td>
+                <input type='text' onChange={this.updateNameHandle.bind(this)}  className="form-control"/><br/>
+                <button  className="btn btn-success" onClick={this.setNameHandle.bind(this)}> Add name </button>
+              </td>
+              <td>
+                <NameList currentName={this.props.currentName}/>
+              </td>
+            </tr>
+          </table>
+            
+          </div>
+        </div>      
       );
     }    
 }

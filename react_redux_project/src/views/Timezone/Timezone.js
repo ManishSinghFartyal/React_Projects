@@ -6,7 +6,7 @@ const Timezone = (props) => {
         <div>
             <h3>Welcome</h3>
             <p>Current time : {props.currentTime}</p>
-            <button onClick={props.updateTime}>Update time</button>
+            <button className="btn btn-sm btn-info" onClick={props.updateTime}>Update time</button>
         </div>
         );
    }
